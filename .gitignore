@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 配置和临时文件
+.comfyui_translator/
+*.log
+daifanyi.json
+yifanyi.json
+temp_*.json
+temp_*.txt
+temp_translatable_parts.txt
+
+# 测试
+test_*.py 

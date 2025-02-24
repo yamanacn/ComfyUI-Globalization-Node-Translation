@@ -1,0 +1,13 @@
+# 自动检测文本文件并执行LF标准化
+* text=auto
+
+# Python源文件
+*.py text diff=python
+
+# Windows批处理文件使用CRLF
+*.bat text eol=crlf
+
+# 文本文件使用LF
+*.txt text eol=lf
+*.md text eol=lf
+*.json text eol=lf 
