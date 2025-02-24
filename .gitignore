@@ -16,6 +16,7 @@ env/
 
 # 配置和临时文件
 .comfyui_translator/
+config.json
 *.log
 daifanyi.json
 yifanyi.json
