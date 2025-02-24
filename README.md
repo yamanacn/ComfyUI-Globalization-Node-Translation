@@ -3,9 +3,10 @@
 - 本项目全程由cursor制作，本人只提供程序实现的思路，项目中可能存在废弃的代码与本人无关，纯粹cursor没删掉。
 - 特别鸣谢：[@AIGODLIKE](https://github.com/AIGODLIKE) 只剩一瓶辣椒酱老师和维护翻译工作的所有老师，感谢他们为英文不好的我在摸索comfyui中提供的帮助。
 - 如果程序对你有帮助，请点个star，代码全部开源，任何人都可以优化
-# ComfyUI节点翻译工具
 
-一个用于翻译ComfyUI节点定义的工具，支持多语言翻译功能。
+## ComfyUI节点翻译工具
+#注意：如果批量拖拽插件文件夹时，一次性请不要拖拽太多，建议10个文件夹左右
+#原因：部分老旧的插件，节点编写可能不规范，检测节点时会报错，导致程序停止
 
 ## 功能特点
 
@@ -14,8 +15,8 @@
 - 使用火山引擎API进行专业翻译
 - 友好的图形用户界面
 - 实时翻译进度显示
-- 火山引擎注册地址：https://www.volcengine.com/experience/ark?utm_term=202502dsinvite&ac=DSASUQY5&rc=R697K17V
--火山引擎教程：https://www.bilibili.com/video/BV1LCN2eZEAX/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ae85ec1de21e4084d40c5d4eec667b8f
+- 火山引擎注册地址：https://www.volcengine.com/
+- 火山引擎教程：https://www.bilibili.com/video/BV1LCN2eZEAX/
 
 ## 系统要求
 
@@ -31,6 +32,10 @@
    - 创建虚拟环境
    - 安装所需依赖
    - 启动程序
+4. 首次运行时，在程序界面的API设置区域填入：
+   - API Key：你的火山引擎API密钥
+   - Model ID：你的模型ID
+   然后点击"保存配置"按钮。配置文件会被安全地保存在用户主目录下的`.comfyui_translator`文件夹中。
 
 ## 使用方法
 

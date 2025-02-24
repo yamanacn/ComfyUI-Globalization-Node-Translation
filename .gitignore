@@ -13,16 +13,24 @@ env/
 .vscode/
 *.swp
 *.swo
+.cursorrules
 
 # 配置和临时文件
 .comfyui_translator/
-config.json
 *.log
 daifanyi.json
 yifanyi.json
 temp_*.json
 temp_*.txt
 temp_translatable_parts.txt
+translated_terms.json
+original_terms.json
+successful_translations.json
+nodeDefs.json
 
 # 测试
-test_*.py 
+test_*.py
+
+# 其他
+.DS_Store
+Thumbs.db 
