@@ -14,7 +14,8 @@
 - 使用火山引擎API进行专业翻译
 - 友好的图形用户界面
 - 实时翻译进度显示
-- 支持保存API配置
+- 火山引擎注册地址：https://www.volcengine.com/experience/ark?utm_term=202502dsinvite&ac=DSASUQY5&rc=R697K17V
+-火山引擎教程：https://www.bilibili.com/video/BV1LCN2eZEAX/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ae85ec1de21e4084d40c5d4eec667b8f
 
 ## 系统要求
 
@@ -24,7 +25,7 @@
 
 ## 安装步骤
 
-1. 安装Python（3.8-3.11版本）
+1. 安装Python（3.8-3.11版本）需要正确的配置到系统环境变量中
 2. 下载本项目代码
 3. 运行`run.bat`脚本，它会自动：
    - 创建虚拟环境
