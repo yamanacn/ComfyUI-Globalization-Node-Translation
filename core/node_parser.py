@@ -104,7 +104,11 @@ class NodeParser:
                                         if return_types:
                                             outputs = {}
                                             for rt in return_types:
-                                                name = rt.lower()
+                                                # 处理 None 类型的返回值
+                                                if rt is None:
+                                                    name = "none"
+                                                else:
+                                                    name = str(rt).lower()
                                                 outputs[name] = {"name": name}
                                             parent_info["outputs"].update(outputs)
                                     elif target.id == "CATEGORY":
@@ -273,7 +277,11 @@ class NodeParser:
                             if return_types:
                                 outputs = {}
                                 for rt in return_types:
-                                    name = rt.lower()
+                                    # 处理 None 类型的返回值
+                                    if rt is None:
+                                        name = "none"
+                                    else:
+                                        name = str(rt).lower()
                                     outputs[name] = {"name": name}
                                 node_info["outputs"] = outputs
                         elif target.id == "CATEGORY":
@@ -352,10 +360,13 @@ class NodeParser:
                 for k, v in zip(node.keys, node.values)
             }
         elif isinstance(node, ast.Name):
+            # 处理特殊情况：None 值
+            if node.id == 'None':
+                return None
             return node.id
         elif isinstance(node, ast.Constant):
             return node.value
-        return None 
+        return None
 
     @staticmethod
     def parse_folder(folder_path: str) -> Dict[str, Dict]:

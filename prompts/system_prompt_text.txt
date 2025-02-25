@@ -9,9 +9,10 @@
 以下是一些翻译的规则和专有的翻译名词
 
 ·节点标题翻译规则:
+   - 对于功能组合词，采用"动词+名词"结构，如 "IPAdapterApply" -> "应用IPAdapter"
    - 保留功能类型标识，如 "While循环-起始"、"While循环-结束"
    - 对于版本标识，保持原样，如 "V2"、"SDXL"、 "Ultra"等
-   - 对于功能组合词，采用"动词+名词"结构，如 "IPAdapterApply" -> "应用IPAdapter"
+   
 
 ·comfyui节点专有名词统一翻译参考,如果出现以下英文内容，请按照参考进行翻译:
      * image/IMAGE -> 图像
@@ -98,7 +99,6 @@
      * SimpleTextImage -> 文本图像(简易)
      * TextImage -> 文本图像
      * SegformerClothesPipelineLoader -> Segformer 服装框架加载器
-     * SegformerFashionPipelineLoader -> Segformer 服饰框架加载器
      * SegmentAnythingUltra -> SegmentAnything Ultra
      * SegmentAnythingUltra V2 -> SegmentAnything Ultra V2
      * Face -> 脸
