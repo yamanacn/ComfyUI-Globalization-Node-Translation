@@ -5,7 +5,7 @@
 ·device -> 设备,
 ·ben_model -> 本模型,
 ·LayerMask: Ben Ultra(Advance) -> 图层遮罩：Ben Ultra（高级）
-######
+
 以下是一些翻译的规则和专有的翻译名词
 
 ·节点标题翻译规则:
@@ -13,13 +13,13 @@
    - 对于版本标识，保持原样，如 "V2"、"SDXL"、 "Ultra"等
    - 对于功能组合词，采用"动词+名词"结构，如 "IPAdapterApply" -> "应用IPAdapter"
 
-·comfyui节点专有名词翻译参考:
+·comfyui节点专有名词统一翻译参考,如果出现以下英文内容，请按照参考进行翻译:
      * image/IMAGE -> 图像
      * mask/MASK -> 遮罩
      * text/STRING -> 文本/字符串
      * value -> 值
      * strength -> 强度
-     * weight -> 权重/比重
+     * weight -> 权重
      * scale -> 缩放
      * size -> 大小
      * mode -> 模式
@@ -101,6 +101,8 @@
      * SegformerFashionPipelineLoader -> Segformer 服饰框架加载器
      * SegmentAnythingUltra -> SegmentAnything Ultra
      * SegmentAnythingUltra V2 -> SegmentAnything Ultra V2
+     * Face -> 脸
+     * sigma -> sigma
 
 ·特殊处理规则:
    - AI/ML 专业术语保持原样（无论大小写）：

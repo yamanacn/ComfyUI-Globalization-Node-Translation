@@ -50,21 +50,23 @@ class FileHandler:
         output_dir = os.path.join(folder_path, "locales", "zh")
         os.makedirs(output_dir, exist_ok=True)
         
+        # 清理数据，移除不需要的字段
+        cleaned_data = {}
+        for key, value in node_info.items():
+            node_data = {}
+            # 只保留需要的字段
+            if "display_name" in value:
+                node_data["display_name"] = value["display_name"]
+            if "inputs" in value:
+                node_data["inputs"] = value["inputs"]
+            if "outputs" in value:
+                node_data["outputs"] = value["outputs"]
+            cleaned_data[key] = node_data
+        
         # 保存 JSON 文件
         output_file = os.path.join(output_dir, "nodeDefs.json")
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(node_info, f, ensure_ascii=False, indent=2)
+            json.dump(cleaned_data, f, ensure_ascii=False, indent=2)
             
         logging.info(f"节点信息已保存到: {output_file}")
-
-        # 清除 category 字段
-        with open(output_file, 'r+', encoding='utf-8') as f:
-            data = json.load(f)
-            for key in data.keys():
-                if 'category' in data[key]:
-                    del data[key]['category']
-            f.seek(0)  # 移动到文件开头
-            json.dump(data, f, ensure_ascii=False, indent=2)
-            f.truncate()  # 截断文件，去掉多余的内容
-
         return output_file 
